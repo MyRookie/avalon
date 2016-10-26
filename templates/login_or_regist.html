@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  {% if ctx.redirect == 'login' %}
+    <title>Login</title>
+      <form action="{{ url_for("game_hall") }}" method="post">
+        <input id="username" required="required" name="username" value="username"/>
+        <input id="password" required="required" name="password" value="password"/>
+        <button type="submit" border="0" value="login" name="submit">
+          submit
+        </button>
+      </form>
+  {% endif %}
+  {% if ctx.redirect == 'regist' %}
+    <title>Regist</title>
+      <form action="{{ url_for("game_hall") }}" method="post">
+        <input id="username" required="required" name="username" value="username"/>
+        <input id="password" required="required" name="password" value="password"/>
+        <input id="email" name="email" value="email"/>
+        <button type="submit" border="0" value="regist" name="submit">
+          submit
+        </button>
+      </form>
+  {% endif %}
+
+</body>
+</html>
